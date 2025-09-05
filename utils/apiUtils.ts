@@ -7,7 +7,8 @@ const USE_DEMO_API = process.env.NEXT_PUBLIC_USE_REAL_API !== 'true';
 
 export async function uploadDocumentWithSchema(
   pdfFile: File | Blob,
-  schema: AnySchema
+  schema: AnySchema,
+  instructionType: 'navacord' | 'care-edge' | 'others' = 'others'
 ): Promise<APIResponse> {
   if (USE_DEMO_API) {
     // Use demo API for development
@@ -40,11 +41,10 @@ export async function uploadDocumentWithSchema(
     formData.append('input_schema', JSON.stringify(schema));
     formData.append('pdf_file', pdfFile, 'document.pdf');
 
-    const response = await fetch(`${API_BASE_URL}/general/extract/data?tmp_dir=%2Ftmp`, {
+    const response = await fetch(`${API_BASE_URL}/general/extract/data?tmp_dir=%2Ftmp&instruction_type=${instructionType}`, {
       method: 'POST',
       headers: {
         'accept': 'application/json',
-        'Authorization': `Bearer ${API_TOKEN}`,
       },
       body: formData,
     });
@@ -125,7 +125,6 @@ export async function checkJobStatus(jobId: string): Promise<ExtractionResult> {
       method: 'GET',
       headers: {
         'accept': 'application/json',
-        'Authorization': `Bearer ${API_TOKEN}`,
       },
     });
 
@@ -245,14 +244,14 @@ function convertNavaCordDataToOurFormat(navaCordData: any): any {
 
 export async function askAIQuestion(
   extractedData: any,
-  question: string
+  question: string,
+  instructionType: 'navacord' | 'care-edge' | 'others' = 'others'
 ): Promise<{ success: boolean; result?: string; error?: string }> {
   try {
-    const response = await fetch(`${API_BASE_URL}/general/question/data`, {
+    const response = await fetch(`${API_BASE_URL}/general/question/data?instruction_type=${instructionType}`, {
       method: 'POST',
       headers: {
         'accept': 'application/json',
-        'Authorization': `Bearer ${API_TOKEN}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({

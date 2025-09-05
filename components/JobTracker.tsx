@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { UploadJob } from '@/types';
 import { pollJobStatus, askAIQuestion } from '@/utils/apiUtils';
-import { generatePDFFromExtractedData } from '@/utils/pdfGenerator';
+import { generateReactPdf, suggestUiSchema } from '@/utils/reactPdfGenerator';
 import { 
   Clock, 
   CheckCircle, 
@@ -18,20 +18,24 @@ import {
   Copy,
   Check
 } from 'lucide-react';
+import MarkdownRenderer from './MarkdownRenderer';
+import ChatModal from './ChatModal';
 
 interface JobTrackerProps {
   jobs: UploadJob[];
   onJobUpdate: (job: UploadJob) => void;
+  instructionType: 'navacord' | 'care-edge' | 'others';
 }
 
-export default function JobTracker({ jobs, onJobUpdate }: JobTrackerProps) {
+export default function JobTracker({ jobs, onJobUpdate, instructionType }: JobTrackerProps) {
   const [pollingJobs, setPollingJobs] = useState<Set<string>>(new Set());
   const [expandedJobs, setExpandedJobs] = useState<Set<string>>(new Set());
-  const [viewMode, setViewMode] = useState<{ [jobId: string]: 'preview' | 'json' | 'chat' }>({});
+  const [viewMode, setViewMode] = useState<{ [jobId: string]: 'preview' | 'json' }>({});
   const [chatMessages, setChatMessages] = useState<{ [jobId: string]: Array<{ role: 'user' | 'ai'; content: string; timestamp: Date }> }>({});
-  const [currentQuestion, setCurrentQuestion] = useState<{ [jobId: string]: string }>({});
   const [isAskingAI, setIsAskingAI] = useState<{ [jobId: string]: boolean }>({});
   const [copiedItems, setCopiedItems] = useState<Set<string>>(new Set());
+  const [isGeneratingPdf, setIsGeneratingPdf] = useState<{ [jobId: string]: boolean }>({});
+  const [activeChatJobId, setActiveChatJobId] = useState<string | null>(null);
 
   useEffect(() => {
     // Start polling for jobs that are pending or processing
@@ -41,6 +45,7 @@ export default function JobTracker({ jobs, onJobUpdate }: JobTrackerProps) {
       }
     });
   }, [jobs]);
+
 
   const startPolling = (jobId: string) => {
     setPollingJobs(prev => new Set([...prev, jobId]));
@@ -83,9 +88,21 @@ export default function JobTracker({ jobs, onJobUpdate }: JobTrackerProps) {
     }, 5 * 60 * 1000);
   };
 
-  const downloadExtractedData = (job: UploadJob) => {
-    if (job.extractedData) {
-      generatePDFFromExtractedData(job.extractedData, 'Extracted Data');
+  const downloadSmartPdf = async (job: UploadJob) => {
+    if (!job.extractedData) return;
+    
+    setIsGeneratingPdf(prev => ({ ...prev, [job.id]: true }));
+    
+    try {
+      const title = `Extracted ${job.fileName.replace('.pdf', '')} Data`;
+      const ui = suggestUiSchema(job.extractedData);
+      
+      await generateReactPdf(job.extractedData, ui, title);
+    } catch (error) {
+      console.error('Smart PDF generation failed:', error);
+      // You could add a toast notification here
+    } finally {
+      setIsGeneratingPdf(prev => ({ ...prev, [job.id]: false }));
     }
   };
 
@@ -101,7 +118,7 @@ export default function JobTracker({ jobs, onJobUpdate }: JobTrackerProps) {
     });
   };
 
-  const setJobViewMode = (jobId: string, mode: 'preview' | 'json' | 'chat') => {
+  const setJobViewMode = (jobId: string, mode: 'preview' | 'json') => {
     setViewMode(prev => ({ ...prev, [jobId]: mode }));
   };
 
@@ -177,7 +194,7 @@ export default function JobTracker({ jobs, onJobUpdate }: JobTrackerProps) {
     }));
 
     try {
-      const response = await askAIQuestion(job.extractedData, question);
+      const response = await askAIQuestion(job.extractedData, question, instructionType);
       
       if (response.success && response.result) {
         const aiMessage = { role: 'ai' as const, content: response.result, timestamp: new Date() };
@@ -200,8 +217,15 @@ export default function JobTracker({ jobs, onJobUpdate }: JobTrackerProps) {
       }));
     } finally {
       setIsAskingAI(prev => ({ ...prev, [jobId]: false }));
-      setCurrentQuestion(prev => ({ ...prev, [jobId]: '' }));
     }
+  };
+
+  const openChatModal = (jobId: string) => {
+    setActiveChatJobId(jobId);
+  };
+
+  const closeChatModal = () => {
+    setActiveChatJobId(null);
   };
 
   const getStatusIcon = (status: UploadJob['status']) => {
@@ -310,11 +334,18 @@ export default function JobTracker({ jobs, onJobUpdate }: JobTrackerProps) {
               {job.status === 'completed' && job.extractedData && (
                 <>
                   <button
-                    onClick={() => downloadExtractedData(job)}
-                    className="flex items-center space-x-1 text-sm btn-primary"
+                    onClick={() => downloadSmartPdf(job)}
+                    disabled={isGeneratingPdf[job.id]}
+                    className="flex items-center space-x-1 text-sm btn-primary disabled:opacity-50"
                   >
-                    <Download className="w-4 h-4" />
-                    <span className='text-white'>PDF</span>
+                    {isGeneratingPdf[job.id] ? (
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                    ) : (
+                      <Download className="w-4 h-4" />
+                    )}
+                    <span className='text-white'>
+                      {isGeneratingPdf[job.id] ? 'Generating...' : 'Download PDF'}
+                    </span>
                   </button>
                   <button
                     onClick={() => toggleJobExpansion(job.id)}
@@ -374,15 +405,11 @@ export default function JobTracker({ jobs, onJobUpdate }: JobTrackerProps) {
                       JSON
                     </button>
                     <button
-                      onClick={() => setJobViewMode(job.id, 'chat')}
-                      className={`px-2 py-1 text-xs rounded ${
-                        viewMode[job.id] === 'chat'
-                          ? 'bg-blue-100 text-blue-800' 
-                          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                      }`}
+                      onClick={() => openChatModal(job.id)}
+                      className="px-2 py-1 text-xs rounded bg-blue-100 text-blue-800 hover:bg-blue-200 transition-colors"
                     >
                       <MessageSquare className="w-3 h-3 inline mr-1" />
-                      AI Chat
+                      Chat with AI
                     </button>
                   </div>
                 </div>
@@ -438,73 +465,23 @@ export default function JobTracker({ jobs, onJobUpdate }: JobTrackerProps) {
                 </div>
               )}
 
-              {/* Chat Mode */}
-              {viewMode[job.id] === 'chat' && (
-                <div className="space-y-3">
-                  <div className="text-xs text-gray-600 mb-2">
-                    Ask AI questions about the extracted data
-                  </div>
-                  
-                  {/* Chat Messages */}
-                  <div className="bg-white rounded border max-h-64 overflow-y-auto p-3 space-y-2">
-                    {chatMessages[job.id]?.map((message, index) => (
-                      <div key={index} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                        <div className={`max-w-xs p-2 rounded text-xs ${
-                          message.role === 'user' 
-                            ? 'bg-blue-100 text-blue-800' 
-                            : 'bg-gray-100 text-gray-800'
-                        }`}>
-                          <div className="whitespace-pre-wrap">{message.content}</div>
-                          <div className="text-xs opacity-60 mt-1">
-                            {message.timestamp.toLocaleTimeString()}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                    
-                    {isAskingAI[job.id] && (
-                      <div className="flex justify-start">
-                        <div className="bg-gray-100 text-gray-800 p-2 rounded text-xs">
-                          <Loader2 className="w-3 h-3 animate-spin inline mr-1" />
-                          AI is thinking...
-                        </div>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Question Input */}
-                  <div className="flex space-x-2">
-                    <input
-                      type="text"
-                      value={currentQuestion[job.id] || ''}
-                      onChange={(e) => setCurrentQuestion(prev => ({ ...prev, [job.id]: e.target.value }))}
-                      placeholder="Ask a question about the extracted data..."
-                      className="input flex-1 text-xs"
-                      onKeyPress={(e) => {
-                        if (e.key === 'Enter' && !isAskingAI[job.id] && currentQuestion[job.id]?.trim()) {
-                          askAI(job.id, currentQuestion[job.id].trim());
-                        }
-                      }}
-                    />
-                    <button
-                      onClick={() => {
-                        if (currentQuestion[job.id]?.trim() && !isAskingAI[job.id]) {
-                          askAI(job.id, currentQuestion[job.id].trim());
-                        }
-                      }}
-                      disabled={!currentQuestion[job.id]?.trim() || isAskingAI[job.id]}
-                      className="btn-primary text-xs px-3 py-2"
-                    >
-                      <Send className="w-3 h-3" />
-                      <span className='text-white'>Ask</span>
-                    </button>
-                  </div>
-                </div>
-              )}
             </div>
           )}
         </div>
       ))}
+      
+      {/* Chat Modal */}
+      {activeChatJobId && (
+        <ChatModal
+          isOpen={true}
+          onClose={closeChatModal}
+          jobId={activeChatJobId}
+          jobTitle={jobs.find(j => j.id === activeChatJobId)?.fileName || 'Document'}
+          messages={chatMessages[activeChatJobId] || []}
+          onSendMessage={(message) => askAI(activeChatJobId, message)}
+          isLoading={isAskingAI[activeChatJobId] || false}
+        />
+      )}
     </div>
   );
 }

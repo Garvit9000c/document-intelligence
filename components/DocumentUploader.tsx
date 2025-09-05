@@ -10,9 +10,10 @@ import { Upload, X, FileText, AlertCircle, CheckCircle, Loader2, Plus } from 'lu
 interface DocumentUploaderProps {
   schema: AnySchema;
   onJobUpdate: (job: UploadJob) => void;
+  instructionType: 'navacord' | 'care-edge' | 'others';
 }
 
-export default function DocumentUploader({ schema, onJobUpdate }: DocumentUploaderProps) {
+export default function DocumentUploader({ schema, onJobUpdate, instructionType }: DocumentUploaderProps) {
   const [files, setFiles] = useState<File[]>([]);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -86,7 +87,7 @@ export default function DocumentUploader({ schema, onJobUpdate }: DocumentUpload
         fileName = `merged-${files.length}-documents.pdf`;
       }
 
-      const response = await uploadDocumentWithSchema(fileToUpload, schema);
+      const response = await uploadDocumentWithSchema(fileToUpload, schema, instructionType);
       
       const newJob: UploadJob = {
         id: response.jobId,

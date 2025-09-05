@@ -8,9 +8,11 @@ import { Edit2, Save, X, RotateCcw, Copy, Check } from 'lucide-react';
 interface SchemaManagerProps {
   schema: AnySchema;
   onSchemaUpdate: (schema: AnySchema) => void;
+  instructionType: 'navacord' | 'care-edge' | 'others';
+  onInstructionTypeChange: (type: 'navacord' | 'care-edge' | 'others') => void;
 }
 
-export default function SchemaManager({ schema, onSchemaUpdate }: SchemaManagerProps) {
+export default function SchemaManager({ schema, onSchemaUpdate, instructionType, onInstructionTypeChange }: SchemaManagerProps) {
   const [errors, setErrors] = useState<string[]>([]);
   const [jsonText, setJsonText] = useState<string>('');
   const [copied, setCopied] = useState(false);
@@ -172,6 +174,30 @@ export default function SchemaManager({ schema, onSchemaUpdate }: SchemaManagerP
               </div>
             </div>
           )}
+        </div>
+      </div>
+
+      {/* Instruction Type Selector */}
+      <div className="bg-white rounded-lg border border-gray-200 p-4">
+        <h4 className="text-sm font-medium text-gray-900 mb-3">Instruction Type</h4>
+        <p className="text-xs text-gray-600 mb-3">
+          Select the instruction mode for API processing
+        </p>
+        <div className="relative">
+          <select
+            value={instructionType}
+            onChange={(e) => onInstructionTypeChange(e.target.value as 'navacord' | 'care-edge' | 'others')}
+            className="w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 appearance-none cursor-pointer"
+          >
+            <option value="others">Others</option>
+            <option value="navacord">Navacord</option>
+            <option value="care-edge">Care Edge</option>
+          </select>
+          <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
         </div>
       </div>
 

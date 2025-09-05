@@ -31,6 +31,7 @@ export interface UploadJob {
   completedTime?: Date;
   extractedData?: any;
   error?: string;
+  instructionType?: 'navacord' | 'care-edge' | 'others';
 }
 
 export interface APIResponse {
@@ -44,4 +45,22 @@ export interface ExtractionResult {
   status: 'pending' | 'processing' | 'completed' | 'failed';
   data?: any;
   error?: string;
+}
+
+// PDF Engine Types
+export interface UiSchema {
+  /** Hide fields by json-path (e.g., "internal.secret") */
+  hide?: string[];
+  /** Labels by path */
+  labels?: Record<string, string>;
+  /** Order within an object path: ["name","email","phone"] */
+  order?: Record<string, string[]>;
+  /** Format by path: "currency" | "number" | "date:YYYY-MM-DD" | custom function name */
+  format?: Record<string, string>;
+  /** Force renderer by path: "table" | "list" | "kv" | "image" | "markdown" */
+  as?: Record<string, "table"|"list"|"kv"|"image"|"markdown">;
+  /** Table columns for an array path: ["a","b.c","d"] -> keys */
+  tableCols?: Record<string, string[]>;
+  /** Section titles for object paths */
+  titles?: Record<string, string>;
 }

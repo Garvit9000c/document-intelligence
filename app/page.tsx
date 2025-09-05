@@ -17,6 +17,7 @@ export default function Dashboard() {
   const [activeView, setActiveView] = useState<'upload' | 'jobs'>('upload');
   const [showSchemaManager, setShowSchemaManager] = useState(false);
   const [pollingJobs, setPollingJobs] = useState<Set<string>>(new Set());
+  const [instructionType, setInstructionType] = useState<'navacord' | 'care-edge' | 'others'>('others');
 
   const handleJobUpdate = useCallback((job: UploadJob) => {
     console.log('Updating job:', job.id, 'status:', job.status, 'hasData:', !!job.extractedData);
@@ -246,6 +247,7 @@ export default function Dashboard() {
                 <DocumentUploader
                   schema={schema}
                   onJobUpdate={handleJobUpdate}
+                  instructionType={instructionType}
                 />
               ) : (
                 <div className="text-center py-12">
@@ -272,7 +274,7 @@ export default function Dashboard() {
               </div>
 
               {jobs.length > 0 ? (
-                <JobTracker jobs={jobs} onJobUpdate={handleJobUpdate} />
+                <JobTracker jobs={jobs} onJobUpdate={handleJobUpdate} instructionType={instructionType} />
               ) : (
                 <div className="text-center py-12">
                   <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
@@ -313,6 +315,8 @@ export default function Dashboard() {
                 <SchemaManager
                   schema={schema}
                   onSchemaUpdate={handleSchemaUpdate}
+                  instructionType={instructionType}
+                  onInstructionTypeChange={setInstructionType}
                 />
               )}
             </div>

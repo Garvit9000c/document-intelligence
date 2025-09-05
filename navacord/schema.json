@@ -1,0 +1,1371 @@
+{
+  "personal_auto": {
+    "policy_identification": {
+      "policy_number": "Unique policy number",
+      "insurer_name": "Name of insurance company",
+      "broker_agent_name": "Name of broker or agent",
+      "effective_date": "Policy start date",
+      "expiry_date": "Policy end date",
+      "policy_term": "Annual / 6 months / Other",
+      "insured_name": "Legal entity or individual insured",
+      "mailing_address": "Address of insured",
+      "contact_information": "Phone and email",
+      "vehicles": [
+        {
+          "vehicle_identification_number_vin": "VIN of insured vehicle",
+          "year": "Vehicle year",
+          "make": "Vehicle make",
+          "model": "Vehicle model",
+          "vehicle_use": "Pleasure / Commute / Business"
+        }
+      ],
+      "drivers": [
+        {
+          "driver_name": "Name of listed driver",
+          "driver_date_of_birth": "Date of birth of listed driver",
+          "drivers_licence_number": "Licence number for the driver",
+          "drivers_licence_province": "Province of issuance for the driver's licence",
+          "driver_experience_years_licensed": "Driving experience",
+          "driving_record": "Driver's official driving record",
+          "convictions": "List of driver's convictions",
+          "claims_history": "History of claims filed by the driver"
+        }
+      ]
+    },
+    "coverage_information": {
+      "third_party_liability_limit": "Mandatory coverage limit",
+      "accident_benefits": "As per provincial schedule",
+      "direct_compensation_dcpd": "Included per province",
+      "uninsured_automobile_coverage": "Coverage for uninsured drivers",
+      "non_owned_auto_liability_opcf_27": "Extends liability for other vehicles",
+      "family_protection_endorsement": "Top-up uninsured coverage",
+      "vehicle_coverages": [
+        {
+          "vehicle_identification_number_vin": "VIN of insured vehicle",
+          "collision_coverage": "Optional, per vehicle",
+          "comprehensive_coverage": "Optional, per vehicle",
+          "specified_perils_coverage": "Optional, per vehicle",
+          "all_perils_coverage": "Optional, per vehicle",
+          "loss_of_use_endorsement": "Rental car coverage",
+          "waiver_of_depreciation": "New car protection",
+          "emergency_roadside_assistance": "Towing & breakdown help"
+        }
+      ]
+    },
+    "limits_and_sublimits": {
+      "third_party_liability_limit": "Max liability payable",
+      "accident_benefits_limit": "Per statutory schedule",
+      "vehicle_limits": [
+        {
+          "vehicle_identification_number_vin": "VIN of insured vehicle",
+          "collision_deductible": "Deductible amount",
+          "comprehensive_deductible": "Deductible amount",
+          "specified_perils_deductible": "Deductible amount",
+          "all_perils_deductible": "Deductible amount",
+          "rental_reimbursement_limit": "Daily & total cap"
+        }
+      ]
+    },
+    "deductibles": {
+      "vehicle_deductibles": [
+        {
+          "vehicle_identification_number_vin": "VIN of insured vehicle",
+          "collision_deductible_amount": "Amount per vehicle",
+          "comprehensive_deductible_amount": "Amount per vehicle",
+          "specified_perils_deductible_amount": "Amount per vehicle",
+          "all_perils_deductible_amount": "Amount per vehicle"
+        }
+      ]
+    },
+    "additional_coverages_extensions": {
+      "opcf_27_non_owned_auto_liability": "Non-owned vehicle liability",
+      "opcf_44r_family_protection": "UMC top-up cover",
+      "accident_forgiveness": "Protects premiums",
+      "vehicle_extensions": [
+        {
+          "vehicle_identification_number_vin": "VIN of insured vehicle",
+          "opcf_20_loss_of_use": "Rental cost coverage",
+          "opcf_43_waiver_of_depreciation": "New vehicle protection",
+          "emergency_service_towing": "Roadside assistance",
+          "replacement_cost_endorsement": "Full replacement",
+          "limited_glass_coverage_buy_back": "Glass coverage"
+        }
+      ]
+    },
+    "common_exclusions": {
+      "use_for_illegal_purposes": "Not covered",
+      "driving_without_valid_licence": "Not covered",
+      "unlisted_drivers": "Not covered unless OPCF 28A",
+      "wear_tear_breakdown": "Not covered",
+      "nuclear_hazard_war_risks": "Not covered",
+      "ride_sharing_delivery": "Excluded unless endorsed"
+    },
+    "forms_and_endorsements": {
+      "oap_1_ontario_owners_form": "Base Ontario form",
+      "spf_no_1_alberta_form": "Base Alberta form",
+      "qpf_no_1_quebec_form": "Base Quebec form",
+      "vehicle_endorsements": [
+        {
+          "vehicle_identification_number_vin": "VIN of insured vehicle",
+          "sef_20_27_43_44": "Western endorsements",
+          "opcf_forms_ontario": "Per coverage chosen"
+        }
+      ]
+    }
+  },
+  "homeowners": {
+    "policy_identification": {
+      "policy_number": "Unique policy number",
+      "insurer_name": "Insurance company name",
+      "broker_agent_name": "Name of broker or agent",
+      "effective_date": "Policy inception date",
+      "expiry_date": "Policy expiry date",
+      "policy_term": "Annual / multi-year",
+      "insured_names": "Legal name(s) of insured",
+      "mailing_address": "Insured\u00e2\u20ac\u2122s mailing address",
+      "insured_contact_information": "Phone and email",
+      "prior_insurance_history": "Past coverage details",
+      "properties": [
+        {
+          "property_address": "Address of insured property",
+          "legal_description_of_property": "Legal details per location",
+          "mortgagees_lienholders": "Listed financial interests",
+          "occupancy_type": "Owner, tenant, seasonal",
+          "construction_type": "Wood, brick, mixed",
+          "year_built": "Original build year of the property",
+          "renovation_details": "Details of any updates or renovations"
+        }
+      ]
+    },
+    "coverage_information": {
+      "personal_property_c": "Contents coverage",
+      "additional_living_expenses_d": "Loss of use coverage",
+      "personal_liability_e": "Third-party liability",
+      "voluntary_medical_payments_f": "Guest medical bills",
+      "voluntary_property_damage": "Covers unintentional property damage",
+      "identity_theft_expense": "Cost coverage for ID fraud",
+      "equipment_breakdown": "Mechanical/electrical failure",
+      "location_coverages": [
+        {
+          "property_address": "Address of insured property",
+          "dwelling_coverage_a": "Building structure value",
+          "detached_private_structures_b": "Garages, sheds, etc.",
+          "sewer_backup_coverage": "Optional add-on per property",
+          "overland_water_coverage": "Optional add-on per property",
+          "service_line_coverage": "Buried utilities coverage"
+        }
+      ],
+      "region_coverages": [
+        {
+          "region_identifier": "Unique identifier for the geographic region",
+          "earthquake_coverage": "Optional based on region"
+        }
+      ]
+    },
+    "limits_sublimits": {
+      "personal_property_limit": "Max payable for contents",
+      "additional_living_expense_limit": "Max payable for Coverage D",
+      "personal_liability_limit": "Max payable for Coverage E",
+      "voluntary_medical_payments_limit": "Coverage F maximum",
+      "location_limits": [
+        {
+          "property_address": "Address of insured property",
+          "dwelling_limit": "Max payable for Coverage A",
+          "detached_structures_limit": "Max payable for Coverage B",
+          "sewer_backup_limit": "Coverage limit per property",
+          "overland_water_limit": "Coverage limit per property"
+        }
+      ],
+      "scheduled_item_limits": [
+        {
+          "scheduled_item_id": "Unique identifier for the scheduled item",
+          "special_limits_jewelry_furs_etc": "Sub-limits for valuables"
+        }
+      ],
+      "region_limits": [
+        {
+          "region_identifier": "Unique identifier for the geographic region",
+          "earthquake_deductible_percentage": "Percentage applied"
+        }
+      ]
+    },
+    "deductibles": {
+      "standard_property_deductible": "Base deductible",
+      "location_deductibles": [
+        {
+          "property_address": "Address of insured property",
+          "sewer_backup_deductible": "Per property",
+          "overland_water_deductible": "Per property",
+          "earthquake_deductible": "Per property"
+        }
+      ]
+    },
+    "additional_coverages_extensions": {
+      "debris_removal": "Cost for cleanup",
+      "credit_debit_card_fraud": "Fraud-related losses",
+      "inflation_protection": "Auto policy inflation updates",
+      "fire_department_service": "Call-out cost",
+      "lock_replacement": "Lost/stolen keys",
+      "food_spoilage_power_outage": "Reimbursement for spoiled goods",
+      "mass_evacuation_coverage": "Mandatory evacuation",
+      "property_extensions": [
+        {
+          "property_address": "Address of insured property",
+          "home_daycare_endorsement": "Extends coverage",
+          "business_property_at_home": "Covers business items"
+        }
+      ]
+    },
+    "common_exclusions": {
+      "wear_tear_gradual_damage": "Excluded",
+      "mould_rot_fungi": "Excluded",
+      "war_nuclear_hazard": "Excluded",
+      "vacancy_beyond_limit": "Excluded unless endorsed",
+      "illegal_activities": "Excluded",
+      "pest_vermin_damage": "Excluded"
+    },
+    "forms_endorsements": {
+      "ibc_1151_comprehensive": "Broadest coverage",
+      "ibc_1153_broad_form": "Mid-tier coverage",
+      "ibc_1155_basic_form": "Minimal coverage",
+      "property_endorsements": [
+        {
+          "property_address": "Address of insured property",
+          "sewer_backup_endorsement": "Adds sewer backup",
+          "overland_water_endorsement": "Adds water coverage",
+          "home_based_business_endorsement": "Extends business coverage"
+        }
+      ],
+      "region_endorsements": [
+        {
+          "region_identifier": "Unique identifier for the geographic region",
+          "earthquake_endorsement": "Adds earthquake protection"
+        }
+      ],
+      "scheduled_item_endorsements": [
+        {
+          "scheduled_item_id": "Unique identifier for the scheduled item",
+          "scheduled_property_endorsement": "For jewelry, collectibles, etc."
+        }
+      ]
+    }
+  },
+  "tenant_renters ": {
+    "policy_identification": {
+      "policy_number": "Unique policy number",
+      "insurer_name": "Insurance company name",
+      "broker_or_agent_name": "Name of broker/agent",
+      "effective_date": "Policy start date",
+      "expiry_date": "Policy end date",
+      "policy_term": "Annual / multi-year",
+      "insured_names": "Legal tenant name(s)",
+      "mailing_address": "Address of insured",
+      "insured_phone": "Phone contact for the insured",
+      "insured_email": "Email contact for the insured",
+      "prior_insurance_history": "Past coverage details",
+      "rental_units": [
+        {
+          "rental_unit_address": "Insured location",
+          "type_of_dwelling": "Apartment, condo, detached",
+          "number_of_units_in_building": "For multi-unit dwellings",
+          "year_built": "Construction year of the building",
+          "renovation_details": "Details of any renovations to the building",
+          "landlords_name": "Required if applicable"
+        }
+      ]
+    },
+    "coverage_information": {
+      "additional_living_expenses_d": "Costs for temporary relocation",
+      "personal_liability_e": "Covers damage/injury to others",
+      "voluntary_medical_payments_f": "Guest injury expenses",
+      "voluntary_property_damage": "Unintentional damage coverage",
+      "identity_theft_expense": "Costs for ID restoration",
+      "scheduled_personal_property": [
+        {
+          "scheduled_item_identifier": "A unique identifier for the scheduled item",
+          "personal_property_coverage_c": "Coverage for tenant-owned items"
+        }
+      ],
+      "location_specific_coverages": [
+        {
+          "rental_unit_address": "The unique address of the insured rental unit for mapping",
+          "sewer_backup_coverage": "Optional add-on",
+          "overland_water_coverage": "Optional add-on",
+          "tenants_improvements_and_betterments": "Upgrades made by tenant",
+          "home_daycare_endorsement": "Adds daycare liability",
+          "business_property_at_home": "Covers business items at home"
+        }
+      ]
+    },
+    "limits_sublimits": {
+      "personal_property_limit": "Max coverage for personal contents",
+      "additional_living_expense_limit": "Temporary housing costs",
+      "personal_liability_limit": "Third-party claims limit",
+      "voluntary_medical_payments_limit": "Per-incident limit",
+      "special_limits": [
+        {
+          "item_category": "The category of high-value item (e.g., Jewelry, Electronics, Money)",
+          "limit_amount": "Caps on high-value categories"
+        }
+      ],
+      "location_specific_limits": [
+        {
+          "rental_unit_address": "The unique address of the insured rental unit for mapping",
+          "sewer_backup_limit": "Coverage cap",
+          "overland_water_limit": "Coverage cap"
+        }
+      ]
+    },
+    "deductibles": {
+      "standard_property_deductible": "Base deductible amount",
+      "location_specific_deductibles": [
+        {
+          "rental_unit_address": "The unique address of the insured rental unit for mapping",
+          "sewer_backup_deductible": "Deductible for sewer-related claims",
+          "overland_water_deductible": "Deductible for flood coverage"
+        }
+      ]
+    },
+    "additional_coverages_extensions": {
+      "debris_removal": "Cleanup after loss",
+      "inflation_protection": "Auto-adjusts coverage",
+      "fire_department_service_charge": "Coverage for response fees",
+      "lock_replacement": "Covers stolen/lost keys",
+      "credit_debit_card_fraud": "Financial fraud reimbursement",
+      "food_spoilage_power_outage": "Covers food loss",
+      "mass_evacuation_coverage": "Covers mandatory relocations",
+      "identity_theft_coverage": "Restores ID & credit"
+    },
+    "common_exclusions": {
+      "wear_and_tear_gradual_deterioration": "Not covered",
+      "mould_rot_fungi": "Not covered",
+      "war_nuclear_hazard": "Not covered",
+      "vacancy_beyond_policy_limit": "Excluded unless endorsed",
+      "illegal_activities": "Not covered",
+      "damage_by_pets_vermin": "Not covered"
+    },
+    "forms_endorsements": {
+      "ibc_tenants_package_policy_form": "National template form",
+      "location_specific_endorsements": [
+        {
+          "rental_unit_address": "The unique address of the insured rental unit for mapping",
+          "sewer_backup_endorsement": "Adds sewer coverage",
+          "overland_water_endorsement": "Adds flood coverage",
+          "home_based_business_endorsement": "Adds home-business coverage"
+        }
+      ],
+      "scheduled_item_endorsements": [
+        {
+          "scheduled_item_identifier": "The unique identifier for the scheduled item for mapping",
+          "scheduled_personal_property_endorsement": "For valuables like jewelry, art"
+        }
+      ]
+    }
+  },
+  "condominium": {
+    "policy_identification": {
+      "policy_number": "Unique policy number",
+      "insurer_name": "Insurance company name",
+      "broker_agent_name": "Broker or agent details",
+      "effective_date": "Policy start date",
+      "expiry_date": "Policy expiry date",
+      "policy_term": "Annual / multi-year",
+      "insured_names": "Legal owner(s) name",
+      "mailing_address": "Correspondence address",
+      "insured_email": "Insured's primary email address",
+      "insured_phone_number": "Insured's primary phone number",
+      "prior_insurance_history": "Previous coverage details",
+      "condo_units": [
+        {
+          "unit_number": "Unique condo unit identifier",
+          "condo_unit_address": "Insured condo unit address",
+          "ownership_type": "Primary, rental, seasonal"
+        }
+      ],
+      "condo_buildings": [
+        {
+          "building_identifier": "A unique identifier for the building",
+          "condo_corporation_name": "Name of the building or condo association",
+          "condo_corporation_address": "Address of the building or condo association",
+          "year_built": "Year of original construction",
+          "renovation_details": "Details of significant upgrades or renovations"
+        }
+      ],
+      "mortgagees_lienholders": [
+        {
+          "unit_number": "Unique condo unit identifier to link the mortgagee/lienholder",
+          "mortgagee_info": "Details of the mortgagee on the property",
+          "lienholder_info": "Details of any lienholders on the property"
+        }
+      ]
+    },
+    "coverage_information": {
+      "additional_living_expenses_coverage_d": "Loss of use protection",
+      "loss_assessment_coverage": "Shared damage payments",
+      "personal_liability_coverage_e": "Coverage for injury or damage claims",
+      "voluntary_medical_payments_coverage_f": "Pays guest medical bills",
+      "voluntary_property_damage": "Covers accidental damage to others\u00e2\u20ac\u2122 property",
+      "identity_theft_expense_coverage": "Identity restoration expense",
+      "unit_coverages": [
+        {
+          "unit_number": "Unique condo unit identifier to link the coverage",
+          "unit_improvements_and_betterments_coverage_a": "Covers tenant-installed upgrades",
+          "sewer_backup_coverage": "Optional coverage for sewer backup incidents",
+          "overland_water_coverage": "Optional coverage for overland water/flood incidents",
+          "unit_contingent_coverage": "Covers gaps if condo corp fails",
+          "home_daycare_endorsement": "Coverage if a daycare is run from the home",
+          "business_property_at_home_coverage": "Covers business items inside the unit"
+        }
+      ],
+      "scheduled_personal_property_coverages": [
+        {
+          "scheduled_item_identifier": "A unique identifier for the scheduled item",
+          "personal_property_coverage_c": "Contents coverage for specific, scheduled personal items"
+        }
+      ]
+    },
+    "limits_and_sublimits": {
+      "personal_property_limit": "Contents max coverage",
+      "additional_living_expense_limit": "Max for temporary relocation",
+      "loss_assessment_limit": "Coverage cap for association assessments",
+      "personal_liability_limit": "Liability claim cap",
+      "voluntary_medical_payments_limit": "Medical payment limit",
+      "unit_limits": [
+        {
+          "unit_number": "Unique condo unit identifier to link the limit",
+          "improvements_and_betterments_limit": "Max coverage for upgrades",
+          "sewer_backup_limit": "Maximum coverage limit per property/unit for sewer backup",
+          "overland_water_limit": "Maximum coverage limit per property/unit for overland water"
+        }
+      ],
+      "special_limits": [
+        {
+          "item_category": "Category of valuable item (e.g., Jewelry, Bicycles, Money)",
+          "limit_amount": "Sub-limit for the specified category of valuables"
+        }
+      ]
+    },
+    "deductibles": {
+      "standard_property_deductible": "Base policy deductible",
+      "unit_deductibles": [
+        {
+          "unit_number": "Unique condo unit identifier to link the deductible",
+          "sewer_backup_deductible": "Deductible per sewer claim",
+          "overland_water_deductible": "Deductible for flood coverage"
+        }
+      ]
+    },
+    "additional_coverages_extensions": {
+      "debris_removal": "Cleanup costs after a covered loss",
+      "inflation_protection": "Automatic coverage increase",
+      "fire_department_service_charge": "Covers fire response fees",
+      "lock_replacement": "Covers stolen or damaged keys",
+      "credit_debit_card_fraud": "Fraud protection reimbursement",
+      "food_spoilage_power_outage": "Replaces spoiled food",
+      "mass_evacuation_coverage": "Emergency relocation coverage",
+      "identity_theft_coverage": "Extended identity recovery",
+      "contingent_loss_assessment_coverage": "If condo corp lacks adequate insurance"
+    },
+    "common_exclusions": {
+      "wear_and_tear": "Exclusion for normal wear and tear",
+      "gradual_deterioration": "Exclusion for gradual deterioration",
+      "mould": "Exclusion for mould",
+      "rot": "Exclusion for rot",
+      "fungi": "Exclusion for fungi",
+      "war": "Exclusion for acts of war",
+      "nuclear_hazard": "Exclusion for nuclear hazards",
+      "vacancy_beyond_policy_limit": "Excluded unless endorsed",
+      "illegal_activities": "Not covered",
+      "damage_by_pets": "Exclusion for damage caused by pets",
+      "damage_by_vermin": "Exclusion for damage caused by vermin"
+    },
+    "forms_and_endorsements": {
+      "ibc_condo_unit_owners_package_policy_form": "National condo template",
+      "loss_assessment_endorsement": "Enhances assessment protection",
+      "unit_endorsements": [
+        {
+          "unit_number": "Unique condo unit identifier to link the endorsement",
+          "sewer_backup_endorsement": "Adds sewer backup coverage",
+          "overland_water_endorsement": "Adds flood coverage",
+          "home_based_business_endorsement": "Adds business equipment coverage"
+        }
+      ],
+      "scheduled_item_endorsements": [
+        {
+          "scheduled_item_identifier": "A unique identifier for the scheduled item",
+          "scheduled_personal_property_endorsement": "Adds coverage for specific items like jewelry, art, electronics"
+        }
+      ]
+    }
+  },
+  "personal_umbrella": {
+    "policy_identification": {
+      "policy_number": "Unique policy number",
+      "insurer_name": "Insurance company name",
+      "broker_agent_name": "Broker or agent details",
+      "effective_date": "Policy start date",
+      "expiry_date": "Policy expiry date",
+      "policy_term": "Annual / multi-year",
+      "insured_names": "Named insureds",
+      "mailing_address": "Correspondence address",
+      "insured_contact_information": "Email and phone",
+      "primary_residence_address": "Primary home details",
+      "prior_umbrella_excess_coverage_history": "Past umbrella coverage details",
+      "underlying_policies": [
+        {
+          "underlying_policy_number": "Unique identifier for the underlying policy",
+          "policy_type": "Type of underlying policy (e.g., Auto, Home, Recreational, Watercraft)",
+          "liability_limit": "Liability limit for this specific underlying policy"
+        }
+      ]
+    },
+    "coverage_information": {
+      "worldwide_coverage_territory": "Global personal liability",
+      "personal_injury_offences": "Optional if included",
+      "volunteer_non_profit_activities": "Liability for charity work (if endorsed)",
+      "defence_costs_outside_the_limit": "Legal costs beyond umbrella limits",
+      "drop_down_coverage_for_uninsured_claims": "Covers uninsured losses beyond retained limit",
+      "excess_liability_coverages": [
+        {
+          "underlying_policy_number": "Identifier to link to the specific underlying policy",
+          "policy_type": "The type of policy this excess liability applies to (e.g., Auto, Homeowners, Watercraft, Recreational Vehicle)",
+          "excess_liability_amount": "Liability coverage amount above the underlying policy's limits"
+        }
+      ]
+    },
+    "limits_and_sublimits": {
+      "overall_umbrella_liability_limit": "Total liability across covered risks",
+      "per_occurrence_limit": "Max coverage per claim",
+      "aggregate_limit": "Annual limit (if applicable)",
+      "self_insured_retention_sir": "Retained limit before umbrella pays",
+      "high_risk_activity_limits": [
+        {
+          "activity_type": "The specific high-risk activity (e.g., Watercraft, rentals)",
+          "separate_limit_amount": "The specific liability limit for this activity"
+        }
+      ]
+    },
+    "deductibles": {
+      "self_insured_retention_amount": "Applies to uncovered/uninsured claims",
+      "specific_claim_deductibles": [
+        {
+          "claim_type": "The specific scenario or type of claim",
+          "deductible_amount": "The unique deductible amount for this claim type"
+        }
+      ]
+    },
+    "additional_coverages_extensions": {
+      "worldwide_legal_defence_coverage": "Global defence cost coverage",
+      "drop_down_coverage_for_uninsured_losses": "Umbrella responds when underlying doesn\u00e2\u20ac\u2122t",
+      "crisis_management_coverage": "Reputation & PR support (optional)",
+      "non_profit_d_o_liability": "Protects while serving on boards",
+      "reputation_management_coverage": "Optional media crisis response",
+      "excess_um_uim_coverages": [
+        {
+          "underlying_policy_number": "Identifier to link to the specific underlying auto policy",
+          "coverage_details": "Details of the excess Uninsured/Underinsured Motorist coverage"
+        }
+      ]
+    },
+    "common_exclusions": {
+      "intentional_injury_or_damage": "Not covered",
+      "business_or_professional_liability": "Unless specifically endorsed",
+      "ownership_operation_of_aircraft": "Excluded",
+      "certain_high_speed_size_watercraft": "Excluded unless endorsed",
+      "business_activities": "Excluded unless covered",
+      "contractual_liability": "Excluded except covered agreements",
+      "damage_to_property_owned_controlled": "Not covered"
+    },
+    "forms_and_endorsements": {
+      "ibc_personal_umbrella_liability_form": "Base policy document",
+      "non_profit_d_o_endorsement": "Adds directors & officers protection",
+      "attached_forms_and_endorsements": [
+        {
+          "underlying_policy_number": "Identifier to link to the specific underlying policy, if applicable",
+          "form_endorsement_type": "Type of form or endorsement (e.g., Schedule of Underlying Insurance, Watercraft Liability Endorsement, Recreational Vehicle Liability Endorsement)",
+          "form_endorsement_details": "Specific details of the attached form or endorsement"
+        }
+      ]
+    }
+  },
+  "general_liability": {
+    "policy_identification": {
+      "policy_number": "Unique policy number",
+      "insurer_name": "Insurance company name",
+      "broker_name": "Broker handling the policy",
+      "agent_name": "Agent handling the policy",
+      "effective_date": "Policy inception date",
+      "expiry_date": "Policy expiration date",
+      "retroactive_date": "For claims-made policies only",
+      "policy_term": "Annual / multi-year",
+      "insured_legal_entity_name": "Business name of insured",
+      "dba_name": "Doing-business-as name",
+      "operating_name": "The operating name of the business",
+      "mailing_address": "Address for correspondence",
+      "insured_contact_phone": "Phone contact information for the insured",
+      "insured_contact_email": "Email contact information for the insured",
+      "business_number_bn": "Canadian tax/business ID",
+      "insured_legal_status": "Corp, partnership, sole prop",
+      "named_additional_insureds": "Endorsed parties"
+    },
+    "coverage_overview": {
+      "coverage_territory": "Geographical limit of policy",
+      "jurisdiction": "Where lawsuits can be filed",
+      "policy_type": "Occurrence vs. claims-made",
+      "project_location_coverages": [
+        {
+          "project_or_location_identifier": "Unique identifier for the project or location to which these coverages apply",
+          "bodily_injury": "Pays claims for third-party injury",
+          "property_damage": "Pays claims for third-party property loss",
+          "personal_and_advertising_injury": "Covers libel, slander, ads",
+          "medical_payments": "Pays small claims without fault",
+          "tenants_legal_liability": "For rented premises",
+          "employers_liability": "Optional endorsement for employee injury lawsuits"
+        }
+      ]
+    },
+    "limits_and_sublimits": {
+      "project_location_limits": [
+        {
+          "project_or_location_identifier": "Unique identifier for the project or location to which these limits apply",
+          "general_aggregate_limit": "Max per policy",
+          "products_completed_operations_aggregate": "Separate aggregate for completed ops",
+          "personal_and_advertising_injury_limit": "Sublimit for defamation, ads",
+          "each_occurrence_limit": "Max per single event",
+          "medical_expense_limit": "Max payable per person",
+          "tenants_legal_liability_limit": "Max for rented premises",
+          "fire_damage_legal_liability_limit": "Separate limit for fire",
+          "voluntary_medical_payments_limit": "Per individual incident",
+          "per_project_aggregate_limit": "Optional endorsement for a separate per-project limit"
+        }
+      ]
+    },
+    "deductibles": {
+      "project_location_deductibles": [
+        {
+          "project_or_location_identifier": "Unique identifier for the project or location to which these deductibles apply",
+          "per_occurrence_deductible": "Standard retention per claim",
+          "bodily_injury_deductible": "Specific retention for BI claims",
+          "property_damage_deductible": "Retention for property claims",
+          "medical_payments_deductible": "Retention per incident",
+          "damage_to_premises_rented_deductible": "Retention on rented property"
+        }
+      ]
+    },
+    "additional_coverages_extensions": {
+      "broad_form_property_damage": "Covers property under care",
+      "blanket_contractual_liability": "Extends liability for signed contracts",
+      "cross_liability": "Protects co-insureds from each other",
+      "severability_of_interests": "Ensures coverage applies separately to each insured",
+      "project_location_additional_coverages": [
+        {
+          "project_or_location_identifier": "Unique identifier for the project or location to which these additional coverages apply",
+          "non_owned_automobile_liability_spf_6": "Covers employees using personal vehicles",
+          "employers_liability": "Covers workplace injury lawsuits",
+          "contingent_employers_liability": "Optional endorsement",
+          "incidental_medical_malpractice": "Optional coverage for minor med errors",
+          "forest_fire_fighting_expense": "Covers costs for wildfire suppression",
+          "elevator_liability": "Covers damages from elevators",
+          "watercraft_aircraft_liability": "Optional endorsement",
+          "cyber_liability_extension": "Limited cyber protection"
+        }
+      ]
+    },
+    "common_exclusions": {
+      "intentional_injury": "Willful acts excluded",
+      "contractual_liability": "Unless covered by exceptions",
+      "workers_comp_obligations": "Employee injuries excluded",
+      "pollution": "Excluded unless sudden & accidental",
+      "asbestos_lead": "Always excluded",
+      "war_exclusion": "Exclusion for acts of war",
+      "terrorism_exclusion": "Exclusion for acts of terrorism, unless endorsed",
+      "damage_to_own_property": "Not covered under CGL",
+      "electronic_data_exclusion": "Excluded unless endorsed"
+    },
+    "forms_and_endorsements": {
+      "ibc_2100_cgl_policy_form": "Base Canadian CGL form",
+      "ibc_2320_tenants_legal_liability": "Separate endorsement",
+      "ibc_2313_non_owned_auto": "SPF endorsement",
+      "ibc_2314_additional_insured_endorsement": "Adds named parties",
+      "ibc_2315_waiver_of_subrogation": "Transfers recovery rights",
+      "ibc_2413_extended_completed_ops": "Extends completed work coverage",
+      "ibc_2415_per_project_aggregate": "Grants separate per-project limit"
+    }
+  },
+  "property": {
+    "policy_identification": {
+      "policy_number": "Unique policy number",
+      "insurer_name": "Insurance company name",
+      "broker_agent_name": "Broker or agent details",
+      "effective_date": "Policy inception date",
+      "expiry_date": "Policy expiration date",
+      "policy_term": "Annual / multi-year",
+      "insured_name_legal_entity": "Named insured entity",
+      "dba_operating_name": "Doing-business-as name",
+      "mailing_address": "Insured\u00e2\u20ac\u2122s mailing address",
+      "insured_contact_information": "Phone and email",
+      "business_number_bn": "Business registration number",
+      "insureds_legal_status": "Corporation, partnership, etc.",
+      "named_additional_insureds": "Entities endorsed"
+    },
+    "coverage_overview": {
+      "coverage_territory": "Applicable region or country",
+      "cause_of_loss_form": "Basic, Broad, or Special",
+      "locations": [
+        {
+          "location_address": "Unique address of the covered location, used for mapping",
+          "occupancy_type": "Usage of property (office, retail, warehouse)",
+          "buildings": [
+            {
+              "building_identifier": "Unique identifier for the building at this location, used for mapping",
+              "building_description": "Physical details for each insured building",
+              "construction_type": "Frame, masonry, fire-resistive, etc.",
+              "year_built": "Year constructed",
+              "total_area_sq_ft": "Building size",
+              "protection_class_fire_protection": "Sprinklers, hydrants, alarms",
+              "valuation_basis": "Replacement cost (RCV) or actual cash value (ACV)"
+            }
+          ]
+        }
+      ]
+    },
+    "limits_sublimits": {
+      "location_limits": [
+        {
+          "location_address": "Unique address of the covered location, used for mapping",
+          "business_personal_property_limit": "Covers equipment, furniture, etc.",
+          "stock_limit": "Covers inventory/stock",
+          "tenants_improvements_betterments": "Fixtures installed by tenant",
+          "extra_expense_limit": "Covers additional costs to continue operations",
+          "debris_removal_limit": "Covers removal of debris post-loss",
+          "electronic_data_processing_equipment": "Covers IT systems"
+        }
+      ],
+      "building_limits": [
+        {
+          "building_identifier": "Unique identifier for the building, used for mapping",
+          "building_limit": "Maximum coverage per structure",
+          "ordinance_or_law_coverage": "Code upgrades post-loss"
+        }
+      ],
+      "valuable_papers_and_records": [
+        "Covers replacement of critical records"
+      ],
+      "accounts_receivable": [
+        "Covers lost receivable records"
+      ],
+      "newly_acquired_constructed_property": [
+        "Covers temporary locations"
+      ],
+      "outdoor_signs_limit": [
+        "Covers detached signboards"
+      ],
+      "transit_coverage_limit": [
+        "Goods-in-transit protection"
+      ],
+      "off_premises_property_limit": [
+        "Covers items temporarily offsite"
+      ]
+    },
+    "deductibles": {
+      "location_deductibles": [
+        {
+          "location_address": "Unique address of the covered location, used for mapping",
+          "building_deductible": "Applies per building/location",
+          "contents_deductible": "For movable assets",
+          "wind_hail_deductible": "Storm risk retention"
+        }
+      ],
+      "Earthquake": [
+        "Percentage-based"
+      ],
+      "Flood": [
+        "Percentage-based"
+      ]
+    },
+    "additional_coverages_extensions": {
+      "inflation_guard": "% increase, not a limit",
+      "preservation_of_property": "Temporary protection costs",
+      "fire_department_service_charge": [
+        "Reimburses call-out charges"
+      ],
+      "pollutant_clean_up_and_removal": [
+        "Covers contamination cleanup"
+      ],
+      "increased_cost_of_construction": [
+        "Required upgrades post-loss"
+      ],
+      "utility_services_direct_damage": [
+        "Covers property loss due to utility failure"
+      ],
+      "utility_services_time_element": [
+        "Covers business income lost"
+      ]
+    },
+    "common_exclusions": {
+      "war_terrorism": "Standard exclusion",
+      "nuclear_hazard": "Always excluded",
+      "flood_earthquake_unless_endorsed": "Excluded unless coverage added",
+      "wear_tear": "Excluded",
+      "mold_fungi": "Excluded unless endorsed",
+      "dishonest_acts": "Employee dishonesty excluded unless covered"
+    },
+    "forms_endorsements": {
+      "ibc_4042_commercial_building_equipment_stock_form": "Core property form",
+      "ibc_4037_profits_form_business_interruption": "BI add-on",
+      "ibc_4046_replacement_cost_endorsement": "Adds RCV coverage",
+      "ibc_4104_earthquake_endorsement": "Adds earthquake coverage",
+      "ibc_4049_flood_endorsement": "Adds flood coverage"
+    }
+  },
+  "business_interruption": {
+    "policy_identification": {
+      "policy_number": "Unique policy number",
+      "insurer_name": "Insurance company name",
+      "broker_or_agent_name": "Broker or agent handling policy",
+      "effective_date": "Policy inception date",
+      "expiry_date": "Policy expiration date",
+      "policy_term": "Annual / multi-year",
+      "insured_name_legal_entity": "Registered business name",
+      "dba_or_operating_name": "Alternate business names",
+      "mailing_address": "Correspondence address",
+      "insured_contact_information": "Phone and email",
+      "business_number_bn": "CRA business registration",
+      "insureds_legal_status": "Corporation, partnership, etc."
+    },
+    "coverage_overview": {
+      "coverage_territory": "Geographic scope of coverage",
+      "business_interruption_coverage_type": "Method of calculating BI (Gross Earnings, Profits, Revenue, etc.)",
+      "period_of_restoration": "Time frame to resume operations",
+      "extended_period_of_indemnity": "Extra indemnity after reopening",
+      "civil_authority_coverage": "Loss from restricted access due to gov\u00e2\u20ac\u2122t order",
+      "ingress_egress_coverage": "Loss from blocked access routes",
+      "service_interruption_coverage": "Covers utility-related BI losses",
+      "ordinary_payroll_coverage": "Option to continue payroll",
+      "scheduled_premises": [
+        {
+          "premises_identifier": "Unique identifier for the business location",
+          "location_details": "Locations listed for BI coverage"
+        }
+      ],
+      "contingent_business_interruption_coverages": [
+        {
+          "dependency_identifier": "Unique identifier for the named supplier or customer",
+          "coverage_details": "Losses from supplier/customer issues"
+        }
+      ],
+      "extra_expense_coverages": [
+        {
+          "premises_identifier": "Unique identifier for the business location",
+          "coverage_details": "Covers expenses to reduce BI impact"
+        }
+      ],
+      "rental_value_coverages": [
+        {
+          "premises_identifier": "Unique identifier for the business location",
+          "coverage_details": "Lost rental income"
+        }
+      ]
+    },
+    "limits_sublimits": {
+      "business_income_limits": [
+        {
+          "premises_identifier": "Unique identifier for the business location",
+          "limit_amount": "BI coverage limit"
+        }
+      ],
+      "extra_expense_limits": [
+        {
+          "premises_identifier": "Unique identifier for the business location",
+          "limit_amount": "Coverage for recovery costs"
+        }
+      ],
+      "ordinary_payroll_limits": [
+        {
+          "premises_identifier": "Unique identifier for the business location",
+          "limit_amount": "Payroll coverage limit"
+        }
+      ],
+      "civil_authority_limits": [
+        {
+          "premises_identifier": "Unique identifier for the business location",
+          "limit_details": "BI caused by evacuation orders"
+        }
+      ],
+      "contingent_business_interruption_limits": [
+        {
+          "dependency_identifier": "Unique identifier for the named supplier or customer",
+          "limit_amount": "Per supplier/customer dependency"
+        }
+      ],
+      "service_interruption_limits": [
+        {
+          "premises_identifier": "Unique identifier for the business location",
+          "limit_amount": "Power/water/gas losses"
+        }
+      ],
+      "ingress_egress_limits": [
+        {
+          "premises_identifier": "Unique identifier for the business location",
+          "limit_amount": "Loss from route access restrictions"
+        }
+      ],
+      "rental_value_limits": [
+        {
+          "premises_identifier": "Unique identifier for the business location",
+          "limit_amount": "Income loss from rental properties"
+        }
+      ]
+    },
+    "deductibles": {
+      "waiting_period": "Time before BI coverage begins",
+      "dollar_deductibles": [
+        {
+          "premises_identifier": "Unique identifier for the business location",
+          "deductible_amount": "Applied instead of waiting period"
+        }
+      ]
+    },
+    "additional_coverages_extensions": {
+      "interruption_by_civil_or_military_authority": "Losses from forced shutdowns",
+      "extended_period_of_indemnity": "Coverage beyond restoration period",
+      "dependent_properties_coverages": [
+        {
+          "dependency_identifier": "Unique identifier for the named supplier or customer",
+          "coverage_details": "Covers key suppliers/customers"
+        }
+      ],
+      "utility_services_coverages": [
+        {
+          "utility_type": "The type of utility service covered (e.g., power, water, telecom)",
+          "coverage_details": "Power, water, telecom"
+        }
+      ],
+      "leasehold_interest_coverages": [
+        {
+          "premises_identifier": "Unique identifier for the business location",
+          "coverage_details": "Tenant BI exposures"
+        }
+      ],
+      "professional_fees_sublimits": [
+        {
+          "premises_identifier": "Unique identifier for the business location",
+          "sublimit_details": "Covers costs for loss adjustment, claims preparation"
+        }
+      ]
+    },
+    "common_exclusions": {
+      "strikes_or_lockouts": "Loss from labor disputes",
+      "power_failure_off_premises_unless_endorsed": "Loss excluded unless covered",
+      "pollution": "Excluded unless specifically covered",
+      "finished_stock_losses": "Loss of unsold inventory excluded",
+      "delay_in_rebuilding": "Excludes non-covered delays"
+    },
+    "forms_endorsements": {
+      "ibc_4102_business_income_broad_form": "Core BI coverage form",
+      "ibc_4104_extra_expense_coverage_form": "Standalone extra expense form",
+      "ibc_4110_rental_value_form": "Adds rental income protection"
+    }
+  },
+  "commercial_auto": {
+    "policy_identification": {
+      "policy_number": "Unique policy number",
+      "insurer_name": "Insurance company name",
+      "broker_agent_name": "Broker or agent handling policy",
+      "effective_date": "Policy inception date",
+      "expiry_date": "Policy expiration date",
+      "policy_term": "Annual / multi-year",
+      "insured_name_legal_entity": "Registered business name",
+      "dba_operating_name": "Alternate business names",
+      "mailing_address": "Correspondence address",
+      "insured_contact_information": "Phone and email",
+      "business_number_bn": "CRA business registration",
+      "insureds_legal_status": "Corporation, partnership, etc.",
+      "named_additional_insureds": "Parties endorsed on the policy"
+    },
+    "coverage_overview": {
+      "coverage_territory": "Geographic scope of coverage (Canada, USA, worldwide if endorsed)",
+      "policy_type": "SPF No. 1, OAP 1, QEF 1, SEF 1",
+      "third_party_liability": "Covers bodily injury & property damage for others",
+      "accident_benefits": "Statutory accident coverage for insureds",
+      "direct_compensation_property_damage_dcpd": "Pays for insured\u00e2\u20ac\u2122s own vehicle when not at fault",
+      "uninsured_automobile_coverage": "Protects if hit by uninsured/unknown driver",
+      "underinsured_motorist_coverage": "Protects when at-fault driver has insufficient limits",
+      "vehicle_coverages": [
+        {
+          "vehicle_identification_number_vin": "Unique identifier to map to a specific vehicle",
+          "physical_damage_collision_or_upset": "Covers collision-related vehicle damage",
+          "physical_damage_comprehensive": "Covers theft, fire, glass, weather, etc.",
+          "specified_perils_coverage": "Covers risks specifically listed in the policy",
+          "all_perils_coverage": "Combines collision + comprehensive"
+        }
+      ]
+    },
+    "limits_and_sublimits": {
+      "third_party_liability_limit": "Max payable for third-party losses",
+      "accident_benefits_limits": "Statutory benefit amounts per province",
+      "uninsured_automobile_limit": "Maximum for uninsured motorist claims",
+      "underinsured_motorist_limit": "Maximum for underinsured driver claims",
+      "vehicle_limits": [
+        {
+          "vehicle_identification_number_vin": "Unique identifier to map to a specific vehicle",
+          "dcpd_limit": "Maximum DCPD coverage",
+          "physical_damage_limit": "Vehicle\u00e2\u20ac\u2122s insured value per schedule",
+          "loss_of_use_limit": "Rental reimbursement if car unusable",
+          "cargo_contents_limit": "For commercial vehicle contents if endorsed"
+        }
+      ]
+    },
+    "deductibles": {
+      "vehicle_deductibles": [
+        {
+          "vehicle_identification_number_vin": "Unique identifier to map to a specific vehicle",
+          "collision_deductible": "Applied per collision claim",
+          "comprehensive_deductible": "Applied per comprehensive loss",
+          "specified_perils_deductible": "Applied per specific peril loss",
+          "all_perils_deductible": "Applied per combined coverage loss"
+        }
+      ]
+    },
+    "additional_coverages_extensions": {
+      "legal_liability_for_non_owned_autos_spf_6": "Covers use of borrowed vehicles",
+      "family_protection_endorsement": "Extends protection to family injuries",
+      "vehicle_extensions": [
+        {
+          "vehicle_identification_number_vin": "Unique identifier to map to a specific vehicle",
+          "loss_of_use_endorsement": "Covers rental expenses during repairs",
+          "replacement_cost_endorsement": "Pays full vehicle value if total loss",
+          "emergency_roadside_assistance": "Covers towing, battery boost, etc.",
+          "rental_vehicle_coverage": "Covers rental replacement car",
+          "fleet_policy_extensions": "Applies when multiple vehicles insured"
+        }
+      ]
+    },
+    "common_exclusions": {
+      "intentional_acts": "Deliberate damage not covered",
+      "criminal_or_prohibited_uses": "Illegal activities void coverage",
+      "use_without_owners_consent": "Unauthorized usage excluded",
+      "wear_and_tear_mechanical_breakdown": "Gradual damage excluded",
+      "nuclear_hazard_war": "Standard exclusion unless endorsed",
+      "cargo_unless_endorsed": "Cargo covered only if added"
+    },
+    "forms_and_endorsements": {
+      "spf_no_1_standard_owners_form": "Core auto insurance policy",
+      "spf_no_6_non_owned_automobile": "Covers borrowed or rented vehicles",
+      "spf_no_7_excess_auto": "Extends limits above SPF No.1",
+      "spf_no_9_excess_non_owned": "Adds coverage for hired vehicles",
+      "vehicle_endorsements": [
+        {
+          "vehicle_identification_number_vin": "Unique identifier to map to a specific vehicle",
+          "opcf_qef_sef_series": "Provincial endorsements for specific risks",
+          "waiver_of_depreciation_endorsement": "Preserves full replacement value for new cars"
+        }
+      ]
+    }
+  },
+  "crime": {
+    "policy_identification": {
+      "policy_number": "Unique policy number",
+      "insurer_name": "Insurance company name",
+      "broker_agent_name": "Broker or agent handling policy",
+      "effective_date": "Policy inception date",
+      "expiry_date": "Policy expiration date",
+      "policy_term": "Annual / multi-year",
+      "insured_name_legal_entity": "Registered business name",
+      "dba_operating_name": "Alternate business names",
+      "mailing_address": "Correspondence address",
+      "insured_contact_information": "Phone and email",
+      "business_number_bn": "CRA business registration",
+      "insureds_legal_status": "Corporation, partnership, etc.",
+      "additional_insureds": [
+        {
+          "name": "Other insureds under the same policy"
+        }
+      ]
+    },
+    "coverage_overview": {
+      "employee_dishonesty_coverage": "Covers theft or fraudulent acts by employees (Form A \u00e2\u20ac\u201c Commercial Blanket Bond)",
+      "forgery_or_alteration_coverage": "Protects against forged or altered cheques, drafts, and financial documents",
+      "theft_disappearance_and_destruction": "Covers loss of money/securities from theft, mysterious disappearance, or destruction",
+      "computer_fraud_coverage": "Protects against theft using computers or systems manipulation",
+      "funds_transfer_fraud_coverage": "Covers fraudulent instructions transferring funds",
+      "client_property_coverage": "Protects client-owned property in insured\u00e2\u20ac\u2122s care",
+      "counterfeit_currency_and_cheque_coverage": "Covers acceptance of counterfeit money or cheques",
+      "credit_card_fraud_coverage": "Covers unauthorized credit card use losses",
+      "social_engineering_fraud_if_endorsed": "Optional endorsement for deceptive transfer requests",
+      "inside_premises_theft_of_money_securities": "Covers cash/securities stolen from inside the premises",
+      "outside_premises_theft_of_money_securities": "Covers theft during transit or off-site storage"
+    },
+    "limits_and_sublimits": {
+      "scheduled_limits": [
+        {
+          "agreement_identifier": "Identifier for the specific insuring agreement, location, entity, or account",
+          "employee_dishonesty_limit": "Max per location/entity if scheduled",
+          "forgery_or_alteration_limit": "Max per location or per agreement",
+          "computer_fraud_limit": "Coverage limit per computer fraud event",
+          "funds_transfer_fraud_limit": "Max coverage per fraudulent instruction",
+          "money_and_securities_inside_premises_limit": "Per-location limit for on-site stored funds",
+          "money_and_securities_outside_premises_limit": "Limit for cash/securities in transit",
+          "social_engineering_fraud_sublimit": "Lower limit for deceptive transfer losses",
+          "deductibles_per_insuring_agreement": "Separate deductibles may apply per coverage"
+        }
+      ]
+    },
+    "deductibles": {
+      "agreement_deductibles": [
+        {
+          "agreement_identifier": "Identifier for the specific insuring agreement or occurrence",
+          "employee_dishonesty_deductible": "Per-occurrence deductible for employee fraud",
+          "forgery_or_alteration_deductible": "Deductible per forgery-related claim",
+          "computer_fraud_deductible": "Deductible per computer fraud event",
+          "funds_transfer_fraud_deductible": "Deductible per fraudulent transfer claim",
+          "money_and_securities_deductible": "Deductible for on-premises or off-premises theft"
+        }
+      ]
+    },
+    "additional_coverages_extensions": {
+      "expenses_to_prove_loss": "Covers investigation/accounting costs",
+      "audit_expenses_coverage": "Reimbursement for audit costs post-loss",
+      "interest_coverage_on_stolen_funds": "Recovers lost interest due to theft",
+      "newly_acquired_formed_entities_coverage": "Automatic coverage for new subsidiaries",
+      "extended_discovery_period": "Claims discovered after policy expiry are covered within grace period",
+      "voluntary_parting_coverage_if_endorsed": "Protects against trick-induced voluntary release of funds"
+    },
+    "common_exclusions": {
+      "acts_of_owners_partners_directors": "Fraud by owners or senior executives excluded",
+      "indirect_or_consequential_loss": "Business interruption from fraud excluded",
+      "loss_from_data_programming_errors": "Software/human input errors excluded unless endorsed",
+      "loss_discovered_outside_policy_period": "Excluded unless ERP (Extended Reporting Period) purchased",
+      "governmental_seizure_or_destruction": "Government confiscation excluded",
+      "nuclear_hazard_war": "Excluded unless specifically endorsed"
+    },
+    "forms_and_endorsements": {
+      "ibc_5200_commercial_crime_policy_form": "Base policy form",
+      "ibc_5215_forgery_or_alteration_coverage_form": "Governs cheque/document forgery protection",
+      "ibc_5220_computer_fraud_form": "Computer-related fraud protection",
+      "ibc_5225_funds_transfer_fraud_form": "Fraudulent transfer coverage form",
+      "ibc_5230_client_property_form": "Governs client asset coverage",
+      "social_engineering_fraud_endorsement": "Optional endorsement for deceptive instructions"
+    }
+  },
+  "equipment_breakdown": {
+    "policy_identification": {
+      "policy_number": "Unique policy number",
+      "insurer_name": "Insurance company name",
+      "broker_agent_name": "Broker or agent handling policy",
+      "effective_date": "Policy inception date",
+      "expiry_date": "Policy expiration date",
+      "policy_term": "Annual / multi-year",
+      "insured_name_legal_entity": "Registered business name",
+      "dba_operating_name": "Alternate business names",
+      "mailing_address": "Correspondence address",
+      "insured_contact_information": "Phone and email",
+      "business_number_bn": "CRA business registration",
+      "insureds_legal_status": "Corporation, partnership, etc.",
+      "additional_insureds": [
+        {
+          "name": "Name of the additional or joint insured entity",
+          "relationship": "Specifies if they are an additional insured or joint insured"
+        }
+      ]
+    },
+    "coverage_overview": {
+      "boiler_pressure_vessel_explosion": "Covers physical damage from boiler or pressure vessel explosions",
+      "mechanical_breakdown": "Covers sudden mechanical failure of covered equipment",
+      "electrical_breakdown_arcing": "Covers damage from short circuits, power surges, or arcing",
+      "air_conditioning_refrigeration_unit_breakdown": "Covers HVAC equipment breakdown",
+      "production_machinery_breakdown": "Covers failure of critical production machinery",
+      "electronic_equipment_breakdown": "Covers damage to computers, PLCs, and control systems",
+      "business_interruption_resulting_from_equipment_breakdown": "Covers loss of income caused by insured equipment failure",
+      "expediting_expenses_coverage": "Covers costs to speed up repair or replacement",
+      "spoilage_damage": "Covers perishable stock damage due to mechanical/electrical failure",
+      "hazardous_substances_cleanup_and_repair": "Covers cleanup if refrigerants, ammonia, or other hazardous materials escape",
+      "data_restoration_data_reproduction": "Covers data recovery and reproduction costs",
+      "water_damage_from_equipment_failure": "Covers water leakage damage due to mechanical failure"
+    },
+    "limits_sublimits": {
+      "aggregate_policy_limit": "Overall policy payout cap",
+      "location_specific_limits": [
+        {
+          "location_identifier": "Unique identifier for the covered location, site, or equipment group",
+          "per_accident_limit": "Max payout per accident, per equipment or location",
+          "expediting_expenses_limit": "Maximum for speeding up recovery after breakdown",
+          "spoilage_limit": "Maximum limit per refrigeration unit or location",
+          "data_restoration_limit": "Limit per system, server, or data environment",
+          "hazardous_substances_limit": "Max for cleanup and restoration",
+          "business_interruption_limit": "Limit for income losses from breakdown (if included)"
+        }
+      ]
+    },
+    "deductibles": {
+      "location_specific_deductibles": [
+        {
+          "location_identifier": "Unique identifier for the covered location, site, or equipment group",
+          "per_accident_deductible": "Deductible per covered breakdown incident",
+          "business_interruption_waiting_period": "Time before coverage begins, often in hours or days",
+          "data_restoration_deductible": "Deductible per incident involving data loss",
+          "spoilage_deductible": "Deductible for spoilage-related claims"
+        }
+      ]
+    },
+    "additional_coverages_extensions": {
+      "contingent_business_interruption_suppliers_location": "Covers BI losses if supplier\u00e2\u20ac\u2122s equipment fails",
+      "demolition_increased_cost_of_construction": "Covers rebuilding to code after breakdown",
+      "green_upgrade_coverage": "Covers energy-efficient equipment replacement",
+      "ordinance_or_law_equipment_upgrade_costs": "Covers compliance-related replacement costs",
+      "portable_equipment_breakdown": "Covers insured equipment temporarily offsite"
+    },
+    "common_exclusions": {
+      "wear_and_tear": "Excludes gradual deterioration or corrosion",
+      "failure_to_maintain_equipment": "Claims denied if equipment wasn\u00e2\u20ac\u2122t properly serviced",
+      "fire_or_explosion_not_caused_by_breakdown": "Fire damage excluded unless breakdown caused it",
+      "nuclear_hazard": "Excluded unless endorsed",
+      "war_and_terrorism": "Excluded unless endorsed",
+      "flood_or_earthquake": "Excluded unless specifically endorsed"
+    },
+    "forms_endorsements": {
+      "ibc_3000_boiler_machinery_policy_form": "Core equipment breakdown policy wording",
+      "ibc_3005_comprehensive_equipment_breakdown_form": "Broader coverage form",
+      "data_restoration_endorsement": "Adds data recovery protection",
+      "spoilage_endorsement": "Adds perishable inventory coverage",
+      "green_equipment_upgrade_endorsement": "Adds energy-efficient replacement coverage"
+    }
+  },
+  "umbrella": {
+    "policy_identification": {
+      "policy_number": "Unique policy number assigned by the insurer",
+      "insurer_name": "Name of the insurance company issuing the policy",
+      "broker_or_agent_name": "Broker or agent handling the policy",
+      "effective_date": "Policy start date",
+      "expiry_date": "Policy end date",
+      "policy_term": "Indicates if coverage is annual or multi-year",
+      "insured_name_legal_entity": "Registered legal name of the insured",
+      "dba_or_operating_name": "Alternate business or trading names",
+      "mailing_address": "Address for policy-related correspondence",
+      "insured_contact_information": "Primary phone number and email",
+      "business_number_bn": "CRA-issued business registration number",
+      "insureds_legal_status": "Corporation, partnership, or sole proprietorship",
+      "named_additional_insureds": [
+        {
+          "named_additional_insured": "Additional covered entities or locations under the umbrella policy"
+        }
+      ]
+    },
+    "coverage_overview": {
+      "excess_liability_over_underlying_policies": "Provides additional liability coverage above policies like CGL, Auto, and Employers\u00e2\u20ac\u2122 Liability",
+      "drop_down_coverage": "Extends protection where no underlying insurance exists for specific exposures",
+      "worldwide_coverage_territory": "Global coverage if explicitly stated in the policy",
+      "bodily_injury_property_damage_personal_and_advertising_injury": "Covers third-party liabilities under the umbrella layer",
+      "defense_costs": "Specifies whether defense expenses are included in or outside liability limits",
+      "follow_form_coverage": "Ensures umbrella coverage follows the same conditions as underlying policies",
+      "coverage_trigger": "Defines whether claims are handled on an occurrence or claims-made basis"
+    },
+    "limits_and_sublimits": {
+      "each_occurrence_limit": "Maximum liability payout per incident above underlying coverage",
+      "aggregate_limit": "Maximum payout for all covered claims during the policy period",
+      "products_completed_operations_aggregate": "Coverage for completed work/product-related liability",
+      "self_insured_retention_sir": "Deductible for claims not covered by underlying policies",
+      "separate_peril_limits": [
+        {
+          "separate_limit_for_certain_perils": "May apply for specific high-risk exposures like liquor or auto liability"
+        }
+      ]
+    },
+    "deductibles": {
+      "self_insured_retention_amount": "Out-of-pocket payment before umbrella coverage kicks in",
+      "retained_limit_for_non_covered_underlying_claims": "The amount you retain for losses not covered by underlying policies"
+    },
+    "additional_coverages_extensions": {
+      "employers_liability_excess": "Adds excess protection for employer liability claims",
+      "non_owned_auto_excess_liability": "Extends liability protection for hired/non-owned vehicles",
+      "liquor_liability_excess": "Provides excess coverage if alcohol-related exposures are endorsed",
+      "crisis_management_public_relations_coverage": "Covers expenses to manage reputational damage following incidents",
+      "insolvency_of_underlying_insurer": "Drop-down protection in case the primary insurer becomes insolvent"
+    },
+    "common_exclusions": {
+      "asbestos_lead_silica": "Excludes claims related to hazardous materials",
+      "pollution": "Excludes pollution unless sudden/accidental and endorsed",
+      "professional_liability": "Typically excluded unless specifically endorsed",
+      "workers_compensation": "Excludes employee injury claims covered under WC policies",
+      "war_terrorism": "Excluded unless TRIA or equivalent endorsement is added",
+      "fines_penalties_punitive_damages": "Excluded unless legally mandated to cover",
+      "contractual_liability": "Excludes liability assumed beyond underlying policy limits"
+    },
+    "forms_and_endorsements": {
+      "umbrella_liability_policy_form": "Standard insurer-issued umbrella policy wording",
+      "follow_form_endorsement": "Ensures consistency with underlying coverage terms",
+      "drop_down_coverage_endorsement": "Adds drop-down protection for gaps in underlying coverage",
+      "self_insured_retention_endorsement": "Defines the retained limit structure",
+      "worldwide_coverage_endorsement": "Extends coverage to international jurisdictions"
+    }
+  },
+  "cyber_liability": {
+      "policy_identification": {
+          "policy_number": "The unique identifier assigned to the policy by the insurer.",
+          "insurer_name": "The name of the insurance company providing the coverage.",
+          "broker_or_agent_name": "The name of the brokerage or agent who placed the policy.",
+          "effective_date": "The date and time on which the policy coverage begins.",
+          "expiry_date": "The date and time on which the policy coverage ends.",
+          "retroactive_date": "The date from which claims arising from past events are covered.",
+          "policy_term": "The duration of the policy, such as annual or multi-year.",
+          "insured_name_legal_entity": "The legal name of the business or individual insured.",
+          "dba_or_operating_name": "The 'Doing Business As' or operating name of the insured, if different from the legal name.",
+          "mailing_address": "The primary mailing address of the insured.",
+          "insured_contact_phone": "The primary phone number for the insured contact person.",
+          "insured_contact_email": "The primary email address for the insured contact person.",
+          "business_number_bn": "The Canada Revenue Agency (CRA) Business Number for the insured entity.",
+          "insured_legal_status": "The legal structure of the insured entity (e.g., corporation, partnership).",
+          "named_additional_insureds": "A list of other parties who are also covered under this policy."
+      },
+      "coverage_overview": {
+          "coverage_territory": "The geographical area where the policy provides coverage (e.g., Canada, Worldwide).",
+          "jurisdiction": "The legal jurisdiction (e.g., province, country) where legal actions against the insured must be brought.",
+          "policy_type": "The type of policy form, typically 'Claims-Made' for this coverage.",
+          "professional_services_definition": "The specific definition of professional services covered by the policy.",
+          "negligent_acts_errors_omissions_coverage": "Coverage for claims arising from negligent acts, errors, or omissions in the performance of professional services.",
+          "misrepresentation_coverage": "Coverage for unintentional misrepresentation in the course of providing professional services.",
+          "failure_to_render_services_coverage": "Coverage for claims alleging a failure to provide professional services as promised.",
+          "defamation_libel_slander_coverage": "Coverage for claims of defamation, libel, or slander made in the course of providing professional services.",
+          "breach_of_confidentiality_coverage": "Coverage for claims arising from the unauthorized disclosure of confidential information.",
+          "technology_media_services_liability": "Specific liability coverage for technology or media services, if endorsed."
+      },
+      "limits_and_sublimits": {
+          "aggregate_limit_of_liability": "The maximum total amount the insurer will pay for all claims during the policy period.",
+          "per_claim_limit": "The maximum amount the insurer will pay for any single claim.",
+          "defence_costs_inside_or_outside_limit": "Specifies whether legal defense costs are included within the limit of liability or are in addition to it.",
+          "sublimit_for_disciplinary_proceedings": "A lower limit of liability specifically for costs related to disciplinary proceedings.",
+          "sublimit_for_privacy_breach": "A lower limit of liability specifically for costs related to a privacy breach.",
+          "sublimit_for_loss_of_documents_data": "A lower limit of liability specifically for the loss of documents or data.",
+          "separate_limit_for_regulatory_investigations": "A separate limit of liability for costs associated with regulatory investigations."
+      },
+      "deductibles": {
+          "per_claim_deductible": "The amount the insured must pay out-of-pocket for each claim before the insurer's coverage applies.",
+          "defence_costs_deductible": "A separate deductible that applies specifically to legal defense costs, if applicable."
+      },
+      "additional_coverages_extensions": {
+          "worldwide_coverage_with_suit_in_canada_usa": "Coverage for claims arising from incidents anywhere in the world, provided the lawsuit is filed in Canada or the USA.",
+          "extended_reporting_period": "An option to extend the time for reporting claims after the policy has expired.",
+          "automatic_coverage_for_new_subsidiaries": "Coverage that automatically extends to newly acquired or created subsidiaries.",
+          "independent_contractors_coverage": "Coverage for work performed by independent contractors on behalf of the insured.",
+          "reinstatement_of_limits": "A provision that restores the policy limit after it has been reduced by a paid claim, if endorsed.",
+          "cyber_liability_extension": "An extension of coverage to include specific cyber-related risks.",
+          "subpoena_assistance": "Coverage for legal expenses incurred in responding to a subpoena."
+      },
+      "common_exclusions": {
+          "intentional_acts_fraud_exclusion": "Excludes coverage for claims arising from intentional, dishonest, or fraudulent acts.",
+          "bodily_injury_or_property_damage_exclusion": "Excludes coverage for bodily injury or physical property damage, unless it arises directly from the professional services rendered.",
+          "contractual_liability_exclusion": "Excludes liability assumed by the insured under a contract, unless that liability would exist without the contract.",
+          "employment_practices_liability_exclusion": "Excludes claims related to employment matters such as wrongful termination or discrimination.",
+          "patent_trade_secret_infringement_exclusion": "Excludes claims related to the infringement of patents or trade secrets.",
+          "insured_vs_insured_claims_exclusion": "Excludes claims made by one insured party against another insured party under the same policy.",
+          "prior_acts_exclusion": "Excludes coverage for acts that occurred before the policy's retroactive date."
+      },
+      "forms_and_endorsements": {
+          "carrier_specific_professional_liability_form": "The main policy form document used by the carrier for this coverage.",
+          "additional_insured_endorsement": "An endorsement adding another party to the policy as an insured.",
+          "extended_reporting_period_endorsement": "The specific endorsement form used to activate an extended reporting period.",
+          "privacy_breach_endorsement": "An endorsement adding or modifying coverage for privacy breaches.",
+          "disciplinary_proceedings_coverage_endorsement": "An endorsement adding or modifying coverage for disciplinary proceedings."
+      }
+  }
+}

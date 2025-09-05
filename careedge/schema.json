@@ -1,0 +1,175 @@
+{
+  "report_identification": {
+    "company_name": "Legal name of the company",
+    "report_title": "Title of the annual or integrated report",
+    "fiscal_year": "Fiscal year covered by the report (e.g., '2024-2025')",
+    "currency_reported": "The primary currency used in the report (e.g., 'INR', 'USD')"
+  },
+  "chairman_statement": {
+    "chairman_name": "Name of the Chairman or CEO",
+    "statement_summary": "Concise summary of the leadership's message",
+    "key_themes": "List of strategic themes highlighted (e.g., 'Digital Transformation', 'Sustainability')",
+    "performance_metrics_quoted": {
+      "revenue": "Consolidated revenue figure mentioned in the statement",
+      "ebitda": "Consolidated EBITDA figure mentioned in the statement",
+      "net_profit": "Consolidated net profit figure mentioned in the statement",
+      "other_metrics": [
+        {
+          "metric_name": "Name of a specific KPI mentioned (e.g., 'Customer Growth', 'Market Share')",
+          "value": "The value or figure quoted for that KPI"
+        }
+      ]
+    },
+    "future_outlook": "Leadership's vision and outlook for the future"
+  },
+  "multi_year_financial_summary": {
+    "period_years": "The number of years covered in this multi_year_financial_summary (e.g., 5, 10)",
+    "data_by_year": [
+      {
+        "year": "The specific fiscal year for this data point",
+        "revenue_from_operations": "Consolidated revenue from primary business activities",
+        "total_income": "Consolidated total income",
+        "ebitda": "Earnings Before Interest, Depreciation, and Tax",
+        "profit_for_the_year": "Consolidated profit for the year (PAT)",
+        "cash_flow_from_operations": "Net cash generated from operating activities",
+        "net_worth": "Consolidated net worth of the company",
+        "total_assets": "Total consolidated assets",
+        "market_capitalisation": "Market capitalisation value at year-end",
+        "earnings_per_share": "Earnings per share (in reported currency)",
+        "book_value_per_share": "Book value per share (in reported currency)",
+        "debt_equity_ratio": "Ratio of total debt to total equity",
+        "interest_coverage_ratio": "Ratio of EBIT/EBITDA to interest expense",
+        "net_profit_margin_percentage": "Net profit as a percentage of revenue",
+        "return_on_capital_employed_percentage": "Return on Capital Employed (ROCE)"
+      }
+    ]
+  },
+  "management_discussion_and_analysis": {
+    "financial_performance_review": {
+      "consolidated_revenue": "Consolidated revenue for the primary reporting year",
+      "consolidated_ebitda": "Consolidated EBITDA for the reporting year",
+      "consolidated_pat": "Consolidated Profit After Tax for the reporting year",
+      "gross_debt": "Company's gross debt as of the report date",
+      "net_debt": "Company's net debt as of the report date",
+      "capital_expenditure": "Capital expenditure for the financial year"
+    },
+    "business_segment_overview": [
+      {
+        "segment_name": "Name of the business segment (e.g., 'Automotive', 'Pharmaceuticals', 'Banking')",
+        "segment_description": "Brief description of what the segment does",
+        "financial_performance": {
+          "revenue_from_operations": "Segment-specific revenue from operations",
+          "ebitda": "Segment-specific EBITDA",
+          "ebitda_margin_percentage": "Segment-specific EBITDA margin",
+          "yoy_change_revenue_percentage": "Year-over-year percentage change in segment revenue"
+        },
+        "key_operational_metrics": [
+          {
+            "metric_name": "Name of a key operational metric for this segment (e.g., 'Vehicles Sold', 'Subscribers', 'Loan Book Size')",
+            "value": "Value of the metric for the reporting period"
+          }
+        ],
+        "swot_analysis": {
+          "strengths": "Internal strengths of the segment",
+          "weaknesses": "Internal weaknesses of the segment",
+          "opportunities": "Potential market and business opportunities",
+          "threats": "Potential external threats to the segment"
+        }
+      }
+    ]
+  },
+  "contingent_liabilities_summary": {
+    "total_contingent_liabilities": "Total value of contingent liabilities not provided for",
+    "breakdown": [
+      {
+        "category": "Category of liability (e.g., 'Litigation', 'Guarantees')",
+        "amount": "Amount associated with this category"
+      }
+    ],
+    "summary": "A brief textual summary of the most significant contingent liabilities."
+  },
+  "sustainability_esg_summary": {
+    "esg_strategy_summary": "A brief summary of the company's ESG vision or strategy",
+    "net_zero_commitment": {
+      "target_year": "The target year for achieving net carbon zero, if stated",
+      "commitment_details": "Details about the net-zero goal"
+    },
+    "environmental_performance": {
+      "ghg_emissions_scope1_and_2_tonnes_co2e": "Reported Scope 1 and 2 GHG emissions",
+      "water_consumption_kl": "Total water consumed in kilolitres",
+      "renewable_energy_consumption_percentage": "Renewable energy as a percentage of total consumption",
+      "waste_recycled_percentage": "Total waste recycled as a percentage of total waste generated"
+    },
+    "social_performance": {
+      "total_workforce": "Total number of permanent and contractual employees",
+      "employee_turnover_rate_percentage": "Annual employee turnover or attrition rate",
+      "lost_time_injury_frequency_rate_ltifr": "A key safety metric (LTIFR)",
+      "csr_expenditure": "Total amount spent on Corporate Social Responsibility"
+    }
+  },
+  "corporate_governance_summary": {
+    "auditor_information": {
+      "auditor_name": "Name of the statutory auditor firm",
+      "has_qualifications_or_adverse_remarks": "Boolean (true/false) indicating if the auditor's report is clean",
+      "remarks_summary": "A summary of any qualifications, adverse remarks, or emphasis of matter from the auditor"
+    },
+    "board_composition": { 
+      "total_board_size": "Total number of directors on the board",
+      "independent_directors_count": "Number of independent directors",
+      "independent_director_percentage": "Percentage of the board that is independent"
+    },
+    "related_party_transactions_summary": {
+      "total_value_of_rpt": "Total value of all related-party transactions during the year",
+      "summary_of_key_transactions": "A brief description of the largest or most significant RPTs"
+    },
+    "promoter_pledged_shares_percentage": "Percentage of promoter shareholding that is pledged as collateral",
+    "board_meetings_held": "Number of board meetings held during the year",
+    "shareholding_pattern": {
+      "promoter_and_promoter_group_percentage": "Percentage of shares held by promoters",
+      "institutional_investors_percentage": "Percentage of shares held by institutions (FII, DII)",
+      "public_shareholding_percentage": "Percentage of shares held by the non-institutional public"
+    }
+  },
+  "financial_statements_summary": {
+    "balance_sheet": {
+      "assets": {
+        "property_plant_equipment": "Value of PPE",
+        "intangible_assets_and_goodwill": "Value of intangible assets including goodwill",
+        "inventories": "Value of inventories",
+        "trade_receivables": "Value of trade receivables",
+        "cash_and_cash_equivalents": "Value of cash and cash equivalents",
+        "total_assets": "Total consolidated assets"
+      },
+      "equity_and_liabilities": {
+        "total_equity": "Total consolidated equity",
+        "borrowings_non_current": "Value of long-term borrowings",
+        "borrowings_current": "Value of short-term borrowings",
+        "trade_payables": "Value of trade payables",
+        "total_liabilities": "Total consolidated liabilities"
+      }
+    },
+    "profit_and_loss": {
+      "income": {
+        "revenue_from_operations": "Value of sales and services",
+        "other_income": "Other operating/non-operating income",
+        "total_income": "Total consolidated income"
+      },
+      "expenses": {
+        "cost_of_materials_consumed": "Cost of raw materials",
+        "employee_benefits_expense": "Total expense on employee benefits",
+        "finance_costs": "Total finance costs (interest)",
+        "depreciation_amortisation_expense": "Total depreciation and amortisation",
+        "total_expenses": "Total consolidated expenses"
+      },
+      "profit_before_tax": "Profit before tax",
+      "tax_expenses": "Total tax expenses",
+      "profit_for_the_year": "Profit for the year (PAT)"
+    },
+    "cash_flow_statement": {
+      "cash_flow_from_operating_activities": "Net cash generated from core business operations",
+      "cash_flow_from_investing_activities": "Net cash used in or generated from investments (e.g., CapEx, acquisitions)",
+      "cash_flow_from_financing_activities": "Net cash from financing activities (e.g., raising debt, paying dividends)",
+      "net_change_in_cash_and_equivalents": "The net increase or decrease in cash over the period"
+    }
+  }
+}
