@@ -1,0 +1,26 @@
+{
+  "invoiceNumber": "INV-2024-001",
+  "date": "2024-01-15",
+  "vendorName": "ABC Corp",
+  "vendorAddress": "123 Business St, City, State 12345",
+  "customerName": "XYZ Company",
+  "customerAddress": "456 Client Ave, Town, State 67890",
+  "totalAmount": 1250.00,
+  "subtotal": 1136.36,
+  "taxAmount": 113.64,
+  "currency": "USD",
+  "items": [
+    {
+      "description": "Professional Services",
+      "quantity": 10,
+      "unitPrice": 75.00,
+      "totalPrice": 750.00
+    },
+    {
+      "description": "Software License",
+      "quantity": 1,
+      "unitPrice": 386.36,
+      "totalPrice": 386.36
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+# Document Intelligence Environment Configuration
+# Copy this content to .env.local file
+
+# Set to 'true' to use the real NavaCord API, 'false' to use demo API
+NEXT_PUBLIC_USE_REAL_API=false
+
+# NavaCord API Configuration
+NEXT_PUBLIC_NAVACORD_API_URL=https://api.navacord.9ai.in
+NEXT_PUBLIC_NAVACORD_API_TOKEN=9e4c7a13f6d29b84c51a3d07e9f62c4d8a7b013cfa92de5634b8a15d29e6f7c1
+
+# Demo API Configuration (optional - defaults to localhost:3000)
+NEXT_PUBLIC_DEMO_API_URL=http://localhost:3000
+
+---
+
+INSTRUCTIONS:
+1. Copy the content above (excluding this instructions section)
+2. Create a new file named ".env.local" in the project root
+3. Paste the environment variables
+4. Change NEXT_PUBLIC_USE_REAL_API to 'true' when you want to use the real NavaCord API
+5. Keep it as 'false' for demo mode during development

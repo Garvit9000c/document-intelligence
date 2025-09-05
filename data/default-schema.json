@@ -1,0 +1,18 @@
+{
+  "Organisation": {
+    "Invoice_No": "Invoice Number",
+    "Organisation": "Organisation",
+    "Organisation_Name_and_Address": "Organisation Name and Address"
+  },
+  "total_usage": {
+    "Total_Usage": "Total Usage",
+    "Cluster_Total_Amount": "Total Amount",
+    "Data_Transfer": "Total Amount"
+  },
+  "Payment_Details": {
+    "status": "Status",
+    "Date": "Date",
+    "Amount": "Amount"
+  },
+  "VAT": "VAT"
+}
